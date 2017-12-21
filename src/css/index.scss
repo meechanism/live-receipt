@@ -1,0 +1,177 @@
+@import './live-receipt.scss';
+
+/*
+ * General styles for web live receipt view
+ */
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background: rgba(228,236,237,1);
+  background: linear-gradient(to bottom, rgba(228,236,237,1) 0%, rgba(245,245,245,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4eced', endColorstr='#f5f5f5', GradientType=0 );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  /* Our design defined "small" breakpoint */
+  max-width: 544px;
+  min-width: 357px;
+  margin: 2rem auto 1rem;
+}
+
+.receipt-wrapper {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.05);
+  margin: 0 0.25rem;
+}
+
+.receipt-main {
+  margin: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Header */
+
+.receipt-header {
+  border-bottom: 3px solid #000;
+}
+
+.partner-container {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.partner-container h1 {
+  margin:0;
+}
+
+.partner-logo {
+  background: #aaa;
+}
+
+/* Store Location/Date of Purchase */
+
+.store-date {
+  margin: 0 0 1.25rem;
+}
+
+.small-hr {
+  background-color: #000;
+  width: 64px;
+  height: 2px;
+  text-align: center;
+  margin: 0 auto 1.25rem;
+}
+
+/* Product data */
+
+.product-list {
+  margin-bottom: 2rem;
+}
+
+.product {
+  margin: 0 0 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-asset {
+  width: 78px;
+  height: 78px;
+  border: 1px solid #f0f0f0;
+  float: left;
+  margin-right: 1rem;
+}
+
+.product-desc {
+  list-style-type: none;
+}
+
+.product-name {
+  text-transform: uppercase;
+}
+
+/* Payment */
+
+.payment-info {
+  width: 100%;
+}
+
+.payment-info tr td {
+  padding-bottom: 1.5rem;
+}
+
+.payment-info tr td:first-child {
+  font-weight: bold;
+}
+
+.payment-info tr td:last-child {
+  text-align: right;
+}
+
+.payment-total {
+  border-top:  1px solid #f0f0f0;
+}
+
+.payment-total tr td {
+  padding-top: 1.25rem;
+
+}
+
+// Shipping
+
+.shipping {
+  margin: 0 0 2.5rem;
+}
+/* Retailer contact info */
+
+.retailer-contact {
+  margin: 1rem;
+  font-style: normal;
+  color: #A0A4A7;
+}
+
+.address {
+  display: block;
+}
+/* Footer */
+
+.maven-logo {
+  width: 110px;
+  height: 23px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.learn-maven {
+  margin: 2rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.partner-copy {
+  line-height: 0.5rem;
+}
+
+/* General/Utils */
+
+.center {
+  text-align: center;
+}
+
+.clearfix::before {
+  display: table;
+  content: "";
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}

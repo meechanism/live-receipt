@@ -1,0 +1,24 @@
+{
+  "name": "live-receipt",
+  "version": "0.1.0",
+  "description": "Live receipt page accessible to customers from FBM, SMS, or email",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./scripts/build-assets.js && npm run mustache",
+    "mustache": "mustache ./src/order.json ./src/index.mustache > public/index.html"
+  },
+  "keywords": [
+    "live",
+    "receipt"
+  ],
+  "author": "Mee Cha",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^7.2.3",
+    "copy-dir": "^0.3.0",
+    "mustache": "^2.3.0",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.14"
+  }
+}

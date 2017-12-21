@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maven Live Receipt</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="./build.css">
+
+</head>
+
+<body>
+  <div class="wrapper" aria-label="Content">
+    <div class="receipt-wrapper">
+
+      <!-- 1. Branding -->
+      <header class="receipt-header" role="banner">
+        <!-- If we have no partner lgoo, use the below -->
+        <div class="partner-container">
+          <h1>{{ data.store.name }}</h1>
+        </div>
+
+        <!-- If we have a partner lgoo, use the below -->
+        <!-- <div class="partner-container">
+            <img src="" class="partner-logo" title="{{partnerName}} logo" alt="{{partnerName}} logo"/>
+        </div> -->
+      </header>
+
+      <main class="receipt-main" role="main">
+        <!-- 2. Store Location/Date of Purchase module -->
+        <div class="store-date center">
+          <h2>{{ data.store.name }} - {{ data.store.address.locality }} </h2>
+          <small>{{ data.orderDate }}</small>
+        </div>
+
+        <hr class="small-hr" />
+
+        <!-- 3. Line by Line breakdown/SKUs and Costs -->
+        <div class="product-list">
+          {{#data.orderItems}}
+          <figure class="product clearfix">
+            <img src="{{ product.imageUrl.href }}" class="product-asset" />
+            <figcaption>
+              <h3 class="product-name"> {{ product.manufacturer }}</h3>
+              <ul class="product-desc">
+                <li>{{ product.name }} </li>
+                <li>{{ product.description }}</li>
+                <li><strong>{{ unitAmount.quantity }} {{ unitAmount.currency }}</strong></li>
+              </ul>
+            </figcaption>
+          </figure>
+          {{/data.orderItems}}
+        </div>
+
+        <!-- 4. Payment Totals/Methods -->
+        <table class="payment-info">
+          <tbody>
+            <tr>
+              <td>Payment Method:</td>
+              <td>
+                {{#data.paymentMethods}}
+                  {{#card}}
+                  {{ cardType }} ending in {{ lastFour }}
+                  {{/card}}
+                {{/data.paymentMethods}}
+              </td>
+            </tr>
+            <tr>
+              <td>Subtotal:</td>
+              <td>{{ data.subTotal.quantity }} {{ data.subTotal.currency }}</td>
+            </tr>
+            {{#data.taxes}}
+            <tr>
+              <td>Estimated Tax:</td>
+              <td>
+                {{ amount.quantity }} {{ amount.currency }}
+              </td>
+            </tr>
+            {{/data.taxes}}
+
+            <!-- <tr>
+              <td>Shipping & Handling</td>
+              <td>$4.95</td>
+            </tr> -->
+          </tbody>
+          <tfoot class="payment-total">
+            <tr>
+              <td>Payment Total:</td>
+              <td>{{ data.total.quantity }} {{ data.total.currency }}</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- 5. Shipping Information -->
+        <div class="shipping center">
+          <!-- <h2>Ship to:</h2> -->
+          <!-- <p>123 Main street, San Francisco, CA 94103</p> -->
+        </div>
+
+        <!-- 6. Order Number -->
+        <div class="order-number center">
+          <h2>Order Number:</h2>
+          <p>3748234GEFJGDS</p>
+        </div>
+
+        <!-- 7. Barcode -->
+        <!-- Not required for this sprint... I think. -->
+
+        <!-- 8. Retailer contact people -->
+        <address class="retailer-contact center">
+            <span class="address">
+                {{#data.store.address}}
+                  {{#streetLines}}
+                  {{.}}
+                  {{/streetLines}}
+                {{/data.store.address}}
+            </span>
+            <span class="address">{{ data.store.address.locality }},
+                {{ data.store.address.region }}
+                {{ data.store.address.postalCode }}</span>
+            <span class="address">{{ data.store.phone}}</span>
+        </address>
+      </main>
+    </div>
+
+    <!-- 9. Learn more about Maiv -->
+    <footer class="learn-maven center">
+      <img class="center maven-logo" src="./images/maven-logo-_2x.png" alt="Maven logo" title="Maven logo"/>
+
+      <div class="partner-copy">
+        <p>Some footer copy here.</p>
+        <p>Have questions? <a href="mailto:help@domain.com">Help Email</a></p>
+        <p>
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

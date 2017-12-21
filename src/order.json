@@ -1,0 +1,211 @@
+{
+  "meta": {
+      "deprecationInformation": {}
+  },
+  "errors": {},
+  "data": {
+      "orderRef": "s5a4ysud8lggtjsjrybvs4i",
+      "orderType": "ONLINE",
+      "billingAddress": {
+          "streetLines": [
+              "123MainStreet",
+              "Suite45"
+          ],
+          "locality": "SanFrancisco",
+          "region": "California",
+          "postalCode": "94127",
+          "country": "USA"
+      },
+      "confirmationNumber": "string",
+      "customer": {
+          "title": "Mr",
+          "firstName": "John",
+          "middleName": "Paul",
+          "lastName": "Jones",
+          "email": "jpjones@hotmail.com",
+          "taxIdentificationNumber": "string",
+          "phoneNumbers": [
+              "123-456-7890"
+          ],
+          "address": {
+              "streetLines": [
+                  "123MainStreet",
+                  "Suite45"
+              ],
+              "locality": "SanFrancisco",
+              "region": "California",
+              "postalCode": "94127",
+              "country": "USA"
+          }
+      },
+      "status": "COMPLETE",
+      "orderDate": 1509760171945,
+      "isGift": true,
+      "orderItems": [
+          {
+              "orderItemRef": "4uxbj13ywc4mftotj4i",
+              "product": {
+                  "sku": "string",
+                  "name": "AchillesSuede",
+                  "description": "SuedeShoes",
+                  "url": {
+                      "href": "https://retailer.onemarketnetworks.com/index.html"
+                  },
+                  "imageUrl": {
+                      "href": "https://retailerwebdemo.poc.wrsops.net/public/images/shoes_1.jpg"
+                  },
+                  "brands": [
+                      ""
+                  ],
+                  "category": [
+                      ""
+                  ],
+                  "logoUrl": {
+                      "href": "https://retailer.onemarketnetworks.com/index.html"
+                  },
+                  "manufacturer": "CommonProjects",
+                  "model": "Achilles",
+                  "productIdentifier": {
+                      "gtin8": "string",
+                      "gtin12": "string",
+                      "gtin13": "string",
+                      "gtin14": "string"
+                  }
+              },
+              "quantity": {
+                  "quantity": 1,
+                  "units": "ITEMS"
+              },
+              "unitAmount": {
+                  "quantity": 349,
+                  "currency": "USD"
+              },
+              "itemDiscounts": [],
+              "taxes": [
+                  {
+                      "taxType": "REGION",
+                      "amount": {
+                          "quantity": 36,
+                          "currency": "USD"
+                      },
+                      "rate": 0.08
+                  }
+              ],
+              "total": {
+                  "quantity": 385,
+                  "currency": "USD"
+              }
+          },
+          {
+              "orderItemRef": "aosidj123910",
+              "product": {
+                  "sku": "999",
+                  "name": "CourtLeather",
+                  "description": "LeatherShoes",
+                  "url": {
+                      "href": "https://retailer.onemarketnetworks.com/index.html"
+                  },
+                  "imageUrl": {
+                      "href": "https://retailerwebdemo.poc.wrsops.net/public/images/shoes_2.jpg"
+                  },
+                  "brands": [
+                      ""
+                  ],
+                  "category": [
+                      ""
+                  ],
+                  "logoUrl": {
+                      "href": "https://retailer.onemarketnetworks.com/index.html"
+                  },
+                  "manufacturer": "CommonProjects",
+                  "model": "Court",
+                  "productIdentifier": {
+                      "gtin8": "string",
+                      "gtin12": "string",
+                      "gtin13": "string",
+                      "gtin14": "string"
+                  }
+              },
+              "quantity": {
+                  "quantity": 1,
+                  "units": "ITEMS"
+              },
+              "unitAmount": {
+                  "quantity": 329,
+                  "currency": "USD"
+              },
+              "itemDiscounts": [],
+              "taxes": [
+                  {
+                      "taxType": "REGION",
+                      "amount": {
+                          "quantity": 32,
+                          "currency": "USD"
+                      },
+                      "rate": 0.08
+                  }
+              ],
+              "total": {
+                  "quantity": 361,
+                  "currency": "USD"
+              }
+          }
+      ],
+      "subTotal": {
+          "quantity": 678,
+          "currency": "USD"
+      },
+      "discounts": [],
+      "taxes": [
+          {
+              "taxType": "REGION",
+              "amount": {
+                  "quantity": 68,
+                  "currency": "USD"
+              },
+              "rate": 0.08
+          }
+      ],
+      "total": {
+          "quantity": 746,
+          "currency": "USD"
+      },
+      "paymentMethods": [
+          {
+              "paymentMethodType": "CARD",
+              "amount": {
+                  "quantity": 746,
+                  "currency": "USD"
+              },
+              "card": {
+                  "cardType": "VISA",
+                  "lastFour": "6789",
+                  "issuer": "string",
+                  "startDate": "0316",
+                  "expirationDate": "0319",
+                  "authCode": "string"
+              }
+          }
+      ],
+      "store": {
+          "storeRef": "sadoi912",
+          "name": "CommonProjects",
+          "address": {
+              "streetLines": [
+                  "123MainStreet",
+                  "Suite45"
+              ],
+              "locality": "SanFrancisco",
+              "region": "California",
+              "postalCode": "94127",
+              "country": "USA"
+          },
+          "phone": "123-456-7890",
+          "tillRef": "string"
+      },
+      "orderProperties": {
+          "salesPerson": "SidSalesperson",
+          "operator": "string"
+      }
+  }
+}
